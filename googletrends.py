@@ -45,7 +45,7 @@ for i in range(0,len(latitudes)):
 def init():
     
     for i in range(0,len(latitudes)):                                                                       
-     point[i].set_text(" ")                                                                                 #changing trend text in the plot        
+     point[i].set_text(" ")                       #changing trend text in the plot        
                                                                                               
     return point                                                                                                          
 
@@ -53,9 +53,9 @@ def init():
 def animate(num):                                                                                               
                                                                                                                 
     for i in range(0,len(latitudes)):
-        point[i].set_text(data[country_codes[i]][num])                                                      #thanks to http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/   
+        point[i].set_text(data[country_codes[i]][num])  #thanks to http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/   
         
-    return point                                                                                        #for a great tutorial on matplotlib animation                        
+    return point                                        #for a great tutorial on matplotlib animation                        
                                                                                                                 
 anim = animation.FuncAnimation(plt.gcf(), animate, init_func=init,frames=10, interval=3000, blit=True)
 
